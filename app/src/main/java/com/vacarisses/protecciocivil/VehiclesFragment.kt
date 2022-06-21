@@ -7,7 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.vacarisses.protecciocivil.MainActivity.Companion.usernameGlobal
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_vehicles.*
 import kotlinx.android.synthetic.main.fragment_vehicles.view.*
 
@@ -48,16 +52,11 @@ class VehiclesFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_vehicles, container, false)
-
+        val fab: FloatingActionButton = view.findViewById(R.id.fab_vehicles)
+        val fab1: FloatingActionButton = view.findViewById(R.id.fab_vehicles_kilometratge)
+        val fab2: FloatingActionButton = view.findViewById(R.id.fab_vehicles_manteniment)
+        var isFABOpen = false
         // importamos datos desde el mainactivity
-
-      /*  view.kmsA21Button.setOnClickListener {
-            val intent = Intent(activity, PopUpData::class.java)
-            intent.putExtra("popupVehicle", "A21")
-            intent.putExtra("popupConductor", usernameGlobal)
-            requireActivity().startActivity(intent)
-
-        } */
 
         view.infoA21Button.setOnClickListener {
             val intent = Intent(activity, PopUpInfo::class.java)
@@ -84,9 +83,10 @@ class VehiclesFragment : Fragment() {
         }
 
 
-
         return view
     }
+
+
 
     companion object {
         /**

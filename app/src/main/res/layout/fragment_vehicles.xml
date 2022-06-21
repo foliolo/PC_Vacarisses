@@ -13,6 +13,9 @@
         android:layout_height="match_parent">
 
 
+
+
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -163,7 +166,7 @@
                     android:src="@drawable/matriculaa22"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/infoA21Button" />
+                    app:layout_constraintTop_toBottomOf="@+id/mantenimentA21btn" />
 
                 <ImageView
                     android:id="@+id/matriculaA23ImageView"
@@ -173,7 +176,7 @@
                     android:src="@drawable/matriculaa23"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/infoA22Button" />
+                    app:layout_constraintTop_toBottomOf="@+id/mantenimentA22btn" />
 
                 <ImageView
                     android:id="@+id/matriculaA24ImageView"
@@ -183,7 +186,7 @@
                     android:src="@drawable/matriculaa24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/infoA23Button" />
+                    app:layout_constraintTop_toBottomOf="@+id/mantenimenta23btn" />
 
                 <TextView
                     android:id="@+id/a22label"
@@ -216,17 +219,94 @@
                     android:id="@+id/a24label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="180dp"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="@font/coolveticarg"
                     android:text="A24"
                     android:textColor="#000000"
                     android:textSize="22sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.501"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/matriculaA23ImageView" />
+                    app:layout_constraintTop_toBottomOf="@+id/matriculaA24ImageView" />
 
+                <Button
+                    android:id="@+id/mantenimentA21btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Manteniment"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/infoA21Button" />
 
+                <Button
+                    android:id="@+id/mantenimentA22btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Manteniment"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/infoA22Button" />
+
+                <Button
+                    android:id="@+id/mantenimenta23btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Manteniment"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/infoA23Button" />
+
+                <Button
+                    android:id="@+id/kilometratgea23btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="Kilometratge"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/infoA23Button" />
+
+                <Button
+                    android:id="@+id/kilometratgea24btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="Kilometratge"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/infoA24Button" />
+
+                <Button
+                    android:id="@+id/kilometratgea21btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="Kilometratge"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/infoA21Button" />
+
+                <Button
+                    android:id="@+id/kilometratgea22btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="Kilometratge"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/infoA22Button" />
+
+                <Button
+                    android:id="@+id/mantenimenta24btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Manteniment"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/infoA24Button" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
