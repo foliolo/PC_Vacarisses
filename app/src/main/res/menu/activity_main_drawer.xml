@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:id="@+id/nav_item_home"
+            android:icon="@drawable/ic_username"
+            android:title="Inici" />
+        <item android:id="@+id/nav_item_vehicles"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Vehicles" />
+    </group>
+
+</menu>
