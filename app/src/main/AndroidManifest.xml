@@ -17,7 +17,7 @@
             android:name=".PopUpInfo"
             android:exported="false" />
         <activity
-            android:name=".PopUpData"
+            android:name=".PopUpDataKilometratge"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

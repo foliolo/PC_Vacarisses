@@ -11,10 +11,6 @@ import android.os.Bundle
 import android.view.animation.DecelerateInterpolator
 import androidx.core.graphics.ColorUtils
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_pop_up_data.*
-import kotlinx.android.synthetic.main.activity_pop_up_data.popup_window_background
-import kotlinx.android.synthetic.main.activity_pop_up_data.popup_window_view_with_border
-import kotlinx.android.synthetic.main.activity_pop_up_data.vehicleTextView
 import kotlinx.android.synthetic.main.activity_pop_up_info.*
 
 class PopUpInfo : AppCompatActivity() {
@@ -54,7 +50,7 @@ class PopUpInfo : AppCompatActivity() {
 
         // Close the Popup Window when you press the button
         tornarButton.setOnClickListener {
-            finish()
+            onBackPressed()
         }
 
         //show the data on firebase ddbb
@@ -73,6 +69,7 @@ class PopUpInfo : AppCompatActivity() {
 
 
 
+
     }
 
     override fun onBackPressed() {
@@ -80,7 +77,7 @@ class PopUpInfo : AppCompatActivity() {
         val alpha = 100 // between 0-255
         val alphaColor = ColorUtils.setAlphaComponent(Color.parseColor("#000000"), alpha)
         val colorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), alphaColor, Color.TRANSPARENT)
-        colorAnimation.duration = 500 // milliseconds
+        colorAnimation.duration = 250 // milliseconds
         colorAnimation.addUpdateListener { animator ->
             popup_window_background.setBackgroundColor(
                 animator.animatedValue as Int

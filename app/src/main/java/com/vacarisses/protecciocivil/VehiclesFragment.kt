@@ -6,13 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Toast
-import androidx.navigation.fragment.findNavController
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.vacarisses.protecciocivil.MainActivity.Companion.usernameGlobal
-import kotlinx.android.synthetic.*
-import kotlinx.android.synthetic.main.fragment_vehicles.*
 import kotlinx.android.synthetic.main.fragment_vehicles.view.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -52,12 +45,11 @@ class VehiclesFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_vehicles, container, false)
-        val fab: FloatingActionButton = view.findViewById(R.id.fab_vehicles)
-        val fab1: FloatingActionButton = view.findViewById(R.id.fab_vehicles_kilometratge)
-        val fab2: FloatingActionButton = view.findViewById(R.id.fab_vehicles_manteniment)
         var isFABOpen = false
         // importamos datos desde el mainactivity
 
+
+        //botones información
         view.infoA21Button.setOnClickListener {
             val intent = Intent(activity, PopUpInfo::class.java)
             intent.putExtra("popupVehicle", "A21")
@@ -81,6 +73,32 @@ class VehiclesFragment : Fragment() {
             intent.putExtra("popupVehicle", "A24")
             requireActivity().startActivity(intent)
         }
+
+        //botones kilometraje
+        view.kilometratgea21btn.setOnClickListener {
+            val intent = Intent(activity, PopUpDataKilometratge::class.java)
+            intent.putExtra("popupVehicle", "A21")
+            requireActivity().startActivity(intent)
+        }
+
+        view.kilometratgea22btn.setOnClickListener {
+            val intent = Intent(activity, PopUpDataKilometratge::class.java)
+            intent.putExtra("popupVehicle", "A22")
+            requireActivity().startActivity(intent)
+        }
+
+        view.kilometratgea23btn.setOnClickListener {
+            val intent = Intent(activity, PopUpDataKilometratge::class.java)
+            intent.putExtra("popupVehicle", "A23")
+            requireActivity().startActivity(intent)
+        }
+
+        view.kilometratgea24btn.setOnClickListener {
+            val intent = Intent(activity, PopUpDataKilometratge::class.java)
+            intent.putExtra("popupVehicle", "A24")
+            requireActivity().startActivity(intent)
+        }
+
 
 
         return view

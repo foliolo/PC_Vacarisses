@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/popup_window_background"
-    tools:context=".PopUpData">
+    tools:context=".PopUpDataKilometratge">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/popup_window_view_with_border"
@@ -163,13 +163,13 @@
                     android:id="@+id/kmsAnteriors_label"
                     android:layout_width="88dp"
                     android:layout_height="40dp"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="4dp"
+                    android:background="@drawable/custom_edittext"
                     android:ems="10"
                     android:hint="kms"
-                    android:background="@drawable/custom_edittext"
-                    android:paddingStart="10dp"
                     android:inputType="number"
+                    android:paddingStart="10dp"
                     android:textColor="#000000"
                     app:layout_constraintStart_toEndOf="@+id/textView5"
                     app:layout_constraintTop_toBottomOf="@+id/indicatiuLabel" />
@@ -178,7 +178,7 @@
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="64dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="24dp"
                     android:fontFamily="@font/coolveticarg"
                     android:text="KMS INICI"
@@ -311,6 +311,30 @@
                     app:layout_constraintStart_toEndOf="@+id/horaIniciTime"
                     app:layout_constraintTop_toBottomOf="@+id/serveiLabel"
                     tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/coolveticarg"
+                    android:text="Últ km."
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/kmsAnteriors_label"
+                    app:layout_constraintTop_toBottomOf="@+id/indicatiuLabel" />
+
+                <TextView
+                    android:id="@+id/ultkmtextlabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="14dp"
+                    android:text="Carregant..."
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/textView7"
+                    app:layout_constraintTop_toBottomOf="@+id/indicatiuLabel" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
