@@ -4,16 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#d28f2e"
     android:layout_marginTop="?android:attr/actionBarSize"
+    android:background="#d28f2e"
     tools:context=".VehiclesFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-
-
 
 
         <ScrollView
@@ -27,6 +24,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewA21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardBackgroundColor="#ffd66d"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/matriculaA21imageview"
+                            android:layout_width="135dp"
+                            android:layout_height="64dp"
+                            android:layout_marginTop="16dp"
+                            android:src="@drawable/matriculaa21"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.498"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/matriculaa21" />
 
                         <TextView
                             android:id="@+id/a21textview"
@@ -42,292 +68,395 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/matriculaA21imageview" />
 
-                <TextView
-                    android:id="@+id/a21modeltextview"
-                    android:layout_width="wrap_content"
+                        <TextView
+                            android:id="@+id/a21modeltextview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/coolveticarg"
+                            android:text="Suzuki Burgman 125"
+                            android:textColor="#3E2723"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/a21textview" />
+
+
+                        <Button
+                            android:id="@+id/infoA21Button"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ic_info"
+                            app:backgroundTint="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/a21modeltextview"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <Button
+                            android:id="@+id/mantenimentA21btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="8dp"
+                            android:backgroundTint="#ff8800"
+                            android:text="Manteniment"
+                            android:textColor="#000000"
+                            app:icon="@drawable/ic_mechanic"
+                            app:iconTint="#000000"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/kilometratgea21btn"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/infoA21Button" />
+
+                        <Button
+                            android:id="@+id/kilometratgea21btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:backgroundTint="#ff8800"
+                            android:text="Kilometratge"
+                            android:textColor="#101010"
+                            app:icon="@drawable/ic_odometer"
+                            app:iconTint="#000000"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/mantenimentA21btn"
+                            app:layout_constraintTop_toBottomOf="@+id/infoA21Button" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewA22"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/coolveticarg"
-                    android:text="Suzuki Burgman 125"
-                    android:textColor="#3E2723"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/a21textview" />
-
-                <ImageView
-                    android:id="@+id/matriculaA21imageview"
-                    android:layout_width="135dp"
-                    android:layout_height="64dp"
-                    android:layout_marginTop="64dp"
-                    android:src="@drawable/matriculaa21"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.498"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/matriculaa21" />
-
-                <Button
-                    android:id="@+id/infoA21Button"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/ic_info"
-                    app:backgroundTint="@color/black"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/a21modeltextview"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
-
-                <TextView
-                    android:id="@+id/a22modeltextview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/coolveticarg"
-                    android:text="Nissan Patrol"
-                    android:textColor="#3E2723"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.508"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/a22label" />
-
-                <TextView
-                    android:id="@+id/a23modeltextview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/coolveticarg"
-                    android:text="Nissan Pathfinder"
-                    android:textColor="#3E2723"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/a23label" />
-
-                <TextView
-                    android:id="@+id/a24modeltextview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/coolveticarg"
-                    android:text="Mercedes Sprinter"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.501"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/a24label" />
-
-
-                <Button
-                    android:id="@+id/infoA22Button"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/ic_info"
-                    app:backgroundTint="@color/black"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/a22modeltextview"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
-                <Button
-                    android:id="@+id/infoA23Button"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/ic_info"
-                    app:backgroundTint="@color/black"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.498"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/a23modeltextview"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
-                <Button
-                    android:id="@+id/infoA24Button"
-                    android:layout_width="50dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/ic_info"
-                    app:backgroundTint="@color/black"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.501"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/a24modeltextview"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
-                <ImageView
-                    android:id="@+id/matriculaA22ImageView"
-                    android:layout_width="156dp"
-                    android:layout_height="43dp"
-                    android:layout_marginTop="24dp"
-                    android:src="@drawable/matriculaa22"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/mantenimentA21btn" />
-
-                <ImageView
-                    android:id="@+id/matriculaA23ImageView"
-                    android:layout_width="161dp"
-                    android:layout_height="39dp"
-                    android:layout_marginTop="24dp"
-                    android:src="@drawable/matriculaa23"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/mantenimentA22btn" />
-
-                <ImageView
-                    android:id="@+id/matriculaA24ImageView"
-                    android:layout_width="165dp"
-                    android:layout_height="39dp"
-                    android:layout_marginTop="24dp"
-                    android:src="@drawable/matriculaa24"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/mantenimenta23btn" />
-
-                <TextView
-                    android:id="@+id/a22label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/coolveticarg"
-                    android:text="A22"
-                    android:textColor="#000000"
-                    android:textSize="22sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/matriculaA22ImageView" />
-
-                <TextView
-                    android:id="@+id/a23label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/coolveticarg"
-                    android:text="A23"
-                    android:textColor="#000000"
-                    android:textSize="22sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.503"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/matriculaA23ImageView" />
-
-                <TextView
-                    android:id="@+id/a24label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/coolveticarg"
-                    android:text="A24"
-                    android:textColor="#000000"
-                    android:textSize="22sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/matriculaA24ImageView" />
-
-                <Button
-                    android:id="@+id/mantenimentA21btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:text="Manteniment"
-                    app:layout_constraintEnd_toStartOf="@+id/kilometratgea21btn"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/infoA21Button" />
-
-                <Button
-                    android:id="@+id/mantenimentA22btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:text="Manteniment"
-                    app:layout_constraintEnd_toStartOf="@+id/kilometratgea22btn"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/infoA22Button" />
-
-                <Button
-                    android:id="@+id/mantenimenta23btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:text="Manteniment"
-                    app:layout_constraintEnd_toStartOf="@+id/kilometratgea23btn"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/infoA23Button" />
-
-                <Button
-                    android:id="@+id/kilometratgea23btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#ffd66d"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="50dp"
-                    android:text="Kilometratge"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/mantenimenta23btn"
-                    app:layout_constraintTop_toBottomOf="@+id/infoA23Button" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardviewA21">
 
-                <Button
-                    android:id="@+id/kilometratgea24btn"
-                    android:layout_width="wrap_content"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/matriculaA22ImageView"
+                            android:layout_width="156dp"
+                            android:layout_height="43dp"
+                            android:layout_marginTop="16dp"
+                            android:src="@drawable/matriculaa22"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/a22label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/coolveticarg"
+                            android:text="A22"
+                            android:textColor="#000000"
+                            android:textSize="22sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/matriculaA22ImageView" />
+
+                        <TextView
+                            android:id="@+id/a22modeltextview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/coolveticarg"
+                            android:text="Nissan Patrol"
+                            android:textColor="#3E2723"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.508"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/a22label" />
+
+                        <Button
+                            android:id="@+id/infoA22Button"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ic_info"
+                            app:backgroundTint="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/a22modeltextview"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <Button
+                            android:id="@+id/mantenimentA22btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="8dp"
+                            android:backgroundTint="#ff8800"
+                            android:text="Manteniment"
+                            android:textColor="#000000"
+                            app:icon="@drawable/ic_mechanic"
+                            app:iconTint="#000000"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/kilometratgea22btn"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/infoA22Button" />
+
+                        <Button
+                            android:id="@+id/kilometratgea22btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="9dp"
+                            android:backgroundTint="#ff8800"
+                            android:text="Kilometratge"
+                            android:textColor="#000000"
+                            app:icon="@drawable/ic_odometer"
+                            app:iconTint="#000000"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/mantenimentA22btn"
+                            app:layout_constraintTop_toBottomOf="@+id/infoA22Button" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewA23"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#ffd66d"
+                    app:cardCornerRadius="10dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="50dp"
-                    android:layout_marginBottom="32dp"
-                    android:text="Kilometratge"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardviewA22">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/matriculaA23ImageView"
+                            android:layout_width="161dp"
+                            android:layout_height="39dp"
+                            android:layout_marginTop="24dp"
+                            android:src="@drawable/matriculaa23"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/a23label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/coolveticarg"
+                            android:text="A23"
+                            android:textColor="#000000"
+                            android:textSize="22sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.503"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/matriculaA23ImageView" />
+
+                        <TextView
+                            android:id="@+id/a23modeltextview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/coolveticarg"
+                            android:text="Nissan Pathfinder"
+                            android:textColor="#3E2723"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/a23label" />
+
+                        <Button
+                            android:id="@+id/infoA23Button"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ic_info"
+                            app:backgroundTint="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.498"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/a23modeltextview"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <Button
+                            android:id="@+id/mantenimentA23btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="8dp"
+                            android:backgroundTint="#ff8800"
+                            android:text="Manteniment"
+                            android:textColor="#000000"
+                            app:icon="@drawable/ic_mechanic"
+                            app:iconTint="#000000"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/kilometratgea23btn"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/infoA23Button" />
+
+                        <Button
+                            android:id="@+id/kilometratgea23btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:backgroundTint="#ff8800"
+                            android:text="Kilometratge"
+                            android:textColor="#000000"
+                            app:icon="@drawable/ic_odometer"
+                            app:iconTint="#000000"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/mantenimentA23btn"
+                            app:layout_constraintTop_toBottomOf="@+id/infoA23Button" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewA24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#ffd66d"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/mantenimenta24btn"
-                    app:layout_constraintTop_toBottomOf="@+id/infoA24Button" />
-
-                <Button
-                    android:id="@+id/kilometratgea21btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="50dp"
-                    android:text="Kilometratge"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/mantenimentA21btn"
-                    app:layout_constraintTop_toBottomOf="@+id/infoA21Button" />
-
-                <Button
-                    android:id="@+id/kilometratgea22btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="50dp"
-                    android:text="Kilometratge"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/mantenimentA22btn"
-                    app:layout_constraintTop_toBottomOf="@+id/infoA22Button" />
-
-                <Button
-                    android:id="@+id/mantenimenta24btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="32dp"
-                    android:text="Manteniment"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/kilometratgea24btn"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/infoA24Button" />
+                    app:layout_constraintTop_toBottomOf="@id/cardviewA23">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/matriculaA24ImageView"
+                            android:layout_width="165dp"
+                            android:layout_height="39dp"
+                            android:layout_marginTop="24dp"
+                            android:src="@drawable/matriculaa24"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/a24label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/coolveticarg"
+                            android:text="A24"
+                            android:textColor="#000000"
+                            android:textSize="22sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/matriculaA24ImageView" />
+
+                        <TextView
+                            android:id="@+id/a24modeltextview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/coolveticarg"
+                            android:text="Mercedes Sprinter"
+                            android:textColor="#3E2723"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.501"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/a24label" />
+
+                        <Button
+                            android:id="@+id/infoA24Button"
+                            android:layout_width="50dp"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/ic_info"
+                            app:backgroundTint="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.501"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/a24modeltextview"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <Button
+                            android:id="@+id/kilometratgea24btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:backgroundTint="#ff8800"
+                            android:text="Kilometratge"
+                            android:textColor="#000000"
+                            app:icon="@drawable/ic_odometer"
+                            app:iconTint="#000000"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/mantenimentA24btn"
+                            app:layout_constraintTop_toBottomOf="@+id/infoA24Button" />
+
+                        <Button
+                            android:id="@+id/mantenimentA24btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="8dp"
+                            android:backgroundTint="#ff8800"
+                            android:text="Manteniment"
+                            android:textColor="#000000"
+                            app:icon="@drawable/ic_mechanic"
+                            app:iconTint="#000000"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/kilometratgea24btn"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/infoA24Button" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

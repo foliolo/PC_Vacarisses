@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popup_window_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/popup_window_background"
     tools:context=".PopUpDataKilometratge">
 
     <androidx.cardview.widget.CardView
@@ -41,61 +41,20 @@
                 android:layout_height="613dp"
                 android:layout_centerInParent="true"
                 android:background="#CD5718"
-                android:minHeight="170dp">
+                android:minHeight="170dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView8"
+                app:layout_constraintStart_toEndOf="@+id/textView8">
 
-
-                <EditText
-                    android:id="@+id/kmsFinals_label"
-                    android:layout_width="88dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/custom_edittext"
-                    android:ems="10"
-                    android:hint="kms"
-                    android:inputType="number"
-                    android:paddingStart="10dp"
-                    android:textColor="#000000"
-                    app:layout_constraintStart_toEndOf="@+id/textView6"
-                    app:layout_constraintTop_toBottomOf="@+id/kmsAnteriors_label" />
-
-                <EditText
-                    android:id="@+id/serveiLabel"
-                    android:layout_width="152dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/custom_edittext"
-                    android:ems="10"
-                    android:hint="Servei"
-                    android:inputType="textPersonName"
-                    android:paddingStart="10dp"
-                    android:textColor="#000000"
-                    app:layout_constraintStart_toEndOf="@+id/textView10"
-                    app:layout_constraintTop_toBottomOf="@+id/kmsFinals_label" />
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="64dp"
-                    android:layout_marginTop="27dp"
-                    android:fontFamily="@font/coolveticarg"
-                    android:text="KMS FINALS"
-                    android:textColor="#000000"
-                    android:textSize="18sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/popup_window_title"
                     android:layout_width="329dp"
-                    android:layout_height="48dp"
+                    android:layout_height="0dp"
                     android:layout_marginTop="16dp"
                     android:background="#FF5722"
                     android:fontFamily="@font/coolveticarg"
                     android:gravity="center"
-                    android:text="Introduir kilometratge"
+                    android:text="Introduir manteniment"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp"
@@ -134,10 +93,10 @@
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="64dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="24dp"
                     android:fontFamily="@font/coolveticarg"
-                    android:text="Conductor"
+                    android:text="Responsable manteniment"
                     android:textColor="#000000"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -181,50 +140,37 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="24dp"
                     android:fontFamily="@font/coolveticarg"
-                    android:text="KMS INICI"
+                    android:text="KMS"
                     android:textColor="#000000"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="63dp"
-                    android:layout_marginTop="24dp"
-                    android:fontFamily="@font/coolveticarg"
-                    android:text="Servei"
-                    android:textColor="#000000"
-                    android:textSize="18sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
                 <TextView
-                    android:id="@+id/vehicleTextView"
+                    android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/coolveticarg"
-                    android:text="Data"
+                    android:text="TIPUS MANTENIMENT"
                     android:textColor="#000000"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                    app:layout_constraintTop_toBottomOf="@+id/kmsAnteriors_label" />
 
                 <TextView
                     android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="7dp"
                     android:fontFamily="@font/coolveticarg"
                     android:text="Observacions"
                     android:textColor="#000000"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dataDate" />
+                    tools:layout_editor_absoluteY="354dp" />
 
 
                 <EditText
@@ -232,7 +178,6 @@
                     android:layout_width="183dp"
                     android:layout_height="98dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="9dp"
                     android:background="@drawable/custom_edittext"
                     android:ems="10"
                     android:gravity="start|top"
@@ -240,7 +185,7 @@
                     android:inputType="textMultiLine"
                     android:paddingStart="10dp"
                     app:layout_constraintStart_toEndOf="@+id/textView11"
-                    app:layout_constraintTop_toBottomOf="@+id/dataDate" />
+                    tools:layout_editor_absoluteY="356dp" />
 
                 <Button
                     android:id="@+id/registrarDadesButton"
@@ -248,10 +193,10 @@
                     android:layout_height="50dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginBottom="27dp"
-                    android:text="Registrar"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     android:backgroundTint="#ff8800"
+                    android:text="Registrar"
                     android:textColor="#000000"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <Button
@@ -260,60 +205,11 @@
                     android:layout_height="51dp"
                     android:layout_marginEnd="24dp"
                     android:layout_marginBottom="27dp"
-                    android:text="Netejar"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     android:backgroundTint="#ff8800"
+                    android:text="Netejar"
                     android:textColor="#000000"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
-
-                <com.santalu.maskara.widget.MaskEditText
-                    android:id="@+id/dataDate"
-                    android:layout_width="70dp"
-                    android:layout_height="37dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/custom_edittext"
-                    android:ems="10"
-                    android:hint="Data"
-                    android:inputType="date"
-                    android:paddingStart="10dp"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toEndOf="@+id/vehicleTextView"
-                    app:layout_constraintTop_toBottomOf="@+id/serveiLabel"
-                    app:mask="##/##/####" />
-
-                <com.santalu.maskara.widget.MaskEditText
-                    android:id="@+id/horaIniciTime"
-                    android:layout_width="65dp"
-                    android:layout_height="37dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/custom_edittext"
-                    android:ems="10"
-                    android:hint="h. Inici"
-                    android:inputType="time"
-                    android:paddingStart="10dp"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toEndOf="@+id/dataDate"
-                    app:layout_constraintTop_toBottomOf="@+id/serveiLabel"
-                    app:mask="##:##" />
-
-                <com.santalu.maskara.widget.MaskEditText
-                    android:id="@+id/horaFinalTime"
-                    android:layout_width="65dp"
-                    android:layout_height="37dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/custom_edittext"
-                    android:ems="10"
-                    android:hint="h. Final"
-                    android:inputType="time"
-                    android:paddingStart="10dp"
-                    android:textSize="12sp"
-                    app:layout_constraintStart_toEndOf="@+id/horaIniciTime"
-                    app:layout_constraintTop_toBottomOf="@+id/serveiLabel"
-                    app:mask="##:##"
-                    tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
                     android:id="@+id/textView7"
@@ -338,6 +234,25 @@
                     android:textSize="18sp"
                     app:layout_constraintStart_toEndOf="@+id/textView7"
                     app:layout_constraintTop_toBottomOf="@+id/indicatiuLabel" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="121dp"
+                    android:layout_height="43dp"
+                    android:background="@drawable/custom_edittext"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="14dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView8"
+                    app:layout_constraintTop_toBottomOf="@+id/ultkmtextlabel">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Tipus"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

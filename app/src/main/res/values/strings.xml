@@ -15,4 +15,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="a21">A21</string>
+    <string-array name="tipusManteniment">
+        <item>ITV</item>
+        <item>Averia</item>
+        <item>Altre</item>
+    </string-array>
 </resources>

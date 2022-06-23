@@ -32,6 +32,7 @@ class PopUpDataKilometratge : AppCompatActivity() {
         overridePendingTransition(0,0)
         setContentView(R.layout.activity_pop_up_data_kilometratge)
 
+
         // importamos datos desde el mainactivity
         val bundle = intent.extras
         popupVehicle = bundle?.getString("popupVehicle", "") ?: ""

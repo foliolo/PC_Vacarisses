@@ -99,6 +99,31 @@ class VehiclesFragment : Fragment() {
             requireActivity().startActivity(intent)
         }
 
+        //botones manteniment
+        view.mantenimentA21btn.setOnClickListener {
+            val intent = Intent(activity, PopUpDataManteniment::class.java)
+            intent.putExtra("popupVehicle", "A21")
+            requireActivity().startActivity(intent)
+        }
+
+        view.mantenimentA22btn.setOnClickListener {
+            val intent = Intent(activity, PopUpDataManteniment::class.java)
+            intent.putExtra("popupVehicle", "A22")
+            requireActivity().startActivity(intent)
+        }
+
+        view.mantenimentA23btn.setOnClickListener {
+            val intent = Intent(activity, PopUpDataManteniment::class.java)
+            intent.putExtra("popupVehicle", "A23")
+            requireActivity().startActivity(intent)
+        }
+
+        view.mantenimentA24btn.setOnClickListener {
+            val intent = Intent(activity, PopUpDataManteniment::class.java)
+            intent.putExtra("popupVehicle", "A24")
+            requireActivity().startActivity(intent)
+        }
+
 
 
         return view

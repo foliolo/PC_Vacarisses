@@ -20,6 +20,9 @@
             android:name=".PopUpDataKilometratge"
             android:exported="false" />
         <activity
+            android:name=".PopUpDataManteniment"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/title_activity_main"

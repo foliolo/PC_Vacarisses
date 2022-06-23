@@ -1,28 +1,44 @@
 package com.vacarisses.protecciocivil
 
 import android.animation.Animator
-import com.google.firebase.ktx.Firebase
 import android.animation.AnimatorListenerAdapter
 import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
 import android.graphics.Color
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.animation.DecelerateInterpolator
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import androidx.annotation.RequiresApi
 import androidx.core.graphics.ColorUtils
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
+import com.vacarisses.protecciocivil.MainActivity.Companion.usernameGlobal
+import kotlinx.android.synthetic.main.activity_pop_up_data_kilometratge.*
+import kotlinx.android.synthetic.main.activity_pop_up_data_kilometratge.popup_window_background
+import kotlinx.android.synthetic.main.activity_pop_up_data_kilometratge.popup_window_view_with_border
 import kotlinx.android.synthetic.main.activity_pop_up_info.*
+import java.time.LocalDate
+import java.time.LocalDateTime
+import android.widget.Spinner
+import com.vacarisses.protecciocivil.databinding.ActivityMainBinding
+import java.text.FieldPosition
 
-class PopUpInfo : AppCompatActivity() {
+class PopUpDataManteniment : AppCompatActivity() {
     private var popupVehicle = ""
     private var darkStatusBar = false
     private val database = FirebaseFirestore.getInstance()
 
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         overridePendingTransition(0,0)
-        setContentView(R.layout.activity_pop_up_info)
+        setContentView(R.layout.activity_pop_up_data_manteniment)
+
 
         // importamos datos desde el mainactivity
         val bundle = intent.extras
@@ -30,7 +46,21 @@ class PopUpInfo : AppCompatActivity() {
         darkStatusBar = bundle?.getBoolean("darkstatusbar", false) ?:false
 
         //set data into labels
-        vehicleTextView.setText(popupVehicle)
+        vehicleVariable.text = popupVehicle
+        indicatiuLabel.setText(usernameGlobal)
+        database.collection(popupVehicle).document("info").get().addOnSuccessListener {
+            ultkmtextlabel.setText(it.get("Kilometres")as String?)
+        }
+
+        val seleccioTipus = resources.getStringArray(R.array.tipusManteniment)
+        val adapter = ArrayAdapter(
+            this,
+            R.layout.list_item_tipusmanteniment,
+            seleccioTipus
+        )
+
+
+
 
         //fade animation for the background of popup window
         val alpha = 100 //btwn 0-255
@@ -49,26 +79,33 @@ class PopUpInfo : AppCompatActivity() {
         ).start()
 
         // Close the Popup Window when you press the button
-        tornarButton.setOnClickListener {
+        registrarDadesButton.setOnClickListener {
             onBackPressed()
         }
 
-        //show the data on firebase ddbb
+        //boton limpiar formulario
+        netejarDadesButton.setOnClickListener {
+            kmsAnteriors_label.setText("")
+            observacionsLabel.setText("")
+        }
 
-            database.collection(popupVehicle).document("info").get().addOnSuccessListener{
-                itvEstatTextView.setText(it.get("ITVestat")as String?)
-                fechaItvTextView.setText(it.get("ITVdata") as String?)
-                kilometresTextView.setText(it.get("Kilometres")as String?)
-                ultrevisioTextView.setText(it.get("Ultrevisio") as String?)
-                ultcheckTextView.setText(it.get("Ultcheck") as String?)
-                numPlacesTextView.setText(it.get("Places") as String?)
-                numBastidorTextView.setText(it.get("Bastidor") as String?)
-                numMatriculaTextView.setText(it.get("Matricula") as String?)
-                marcaModelTextView.setText(it.get("MarcaModel") as String?)
-            }
+        //boton registrar - enviar datos a firebase
+        registrarDadesButton.setOnClickListener {
+            val datahora = LocalDateTime.now().toString()
+            database.collection(popupVehicle+"_manteniment").document(datahora).set(
+                hashMapOf(
+                    "Responsable" to indicatiuLabel.text.toString(),
+                    "Observacions" to observacionsLabel.text.toString()
+                )
+            )
 
-
-
+         /*   database.collection(popupVehicle).document("info").set(
+                hashMapOf(
+                "Kilometres" to kmsFinals_label.text.toString()
+            ), SetOptions.merge()
+                        ) */
+            onBackPressed()
+        }
 
 
     }
@@ -100,9 +137,6 @@ class PopUpInfo : AppCompatActivity() {
         colorAnimation.start()
 
     }
-
-
-
 
 
 }
