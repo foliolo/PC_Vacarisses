@@ -8,24 +8,16 @@ import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.view.animation.DecelerateInterpolator
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.annotation.RequiresApi
 import androidx.core.graphics.ColorUtils
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.SetOptions
 import com.vacarisses.protecciocivil.MainActivity.Companion.usernameGlobal
 import kotlinx.android.synthetic.main.activity_pop_up_data_kilometratge.*
 import kotlinx.android.synthetic.main.activity_pop_up_data_kilometratge.popup_window_background
 import kotlinx.android.synthetic.main.activity_pop_up_data_kilometratge.popup_window_view_with_border
-import kotlinx.android.synthetic.main.activity_pop_up_info.*
-import java.time.LocalDate
 import java.time.LocalDateTime
-import android.widget.Spinner
-import com.vacarisses.protecciocivil.databinding.ActivityMainBinding
-import java.text.FieldPosition
 
 class PopUpDataManteniment : AppCompatActivity() {
     private var popupVehicle = ""
@@ -84,7 +76,7 @@ class PopUpDataManteniment : AppCompatActivity() {
         }
 
         //boton limpiar formulario
-        netejarDadesButton.setOnClickListener {
+        tornarKMButton.setOnClickListener {
             kmsAnteriors_label.setText("")
             observacionsLabel.setText("")
         }

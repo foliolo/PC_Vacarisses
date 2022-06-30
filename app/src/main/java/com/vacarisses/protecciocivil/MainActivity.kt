@@ -68,6 +68,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
        when (item.itemId) {
            R.id.nav_item_home -> replaceFragment(HomeFragment(), "Inici")
            R.id.nav_item_vehicles -> replaceFragment(VehiclesFragment(), "Vehicles")
+           R.id.nav_item_camaresforestals -> replaceFragment(CameresForestalsFragment(), "Cameres Forestals")
        }
       drawer.closeDrawer(GravityCompat.START)
       return true
@@ -118,7 +119,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     //funcion setup de la mainactivity.kt
-    private fun setup(email: String, username: String){
+     private fun setup(email: String, username: String){
 
     }
 
@@ -133,6 +134,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawer_layout.closeDrawers()
         setTitle(title) // ponemos el titulo que le pasamos a la ventana
     }
+
 
 
 

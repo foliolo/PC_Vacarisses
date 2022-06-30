@@ -200,7 +200,7 @@
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <Button
-                    android:id="@+id/netejarDadesButton"
+                    android:id="@+id/tornarKMButton"
                     android:layout_width="117dp"
                     android:layout_height="51dp"
                     android:layout_marginEnd="24dp"

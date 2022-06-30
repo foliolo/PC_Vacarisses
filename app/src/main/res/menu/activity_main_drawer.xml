@@ -5,8 +5,11 @@
             android:icon="@drawable/ic_username"
             android:title="Inici" />
         <item android:id="@+id/nav_item_vehicles"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_car"
             android:title="Vehicles" />
+        <item android:id="@+id/nav_item_camaresforestals"
+            android:icon="@drawable/ic_videocam"
+            android:title="Videocameres forestals" />
     </group>
 
 </menu>

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import kotlinx.android.synthetic.main.fragment_vehicles.view.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -31,11 +32,6 @@ class VehiclesFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-
-
-
-
-
 
     }
 
@@ -101,32 +97,40 @@ class VehiclesFragment : Fragment() {
 
         //botones manteniment
         view.mantenimentA21btn.setOnClickListener {
-            val intent = Intent(activity, PopUpDataManteniment::class.java)
+           /* val intent = Intent(activity, PopUpDataManteniment::class.java)
             intent.putExtra("popupVehicle", "A21")
-            requireActivity().startActivity(intent)
+            requireActivity().startActivity(intent) */
+            toastManteniment()
         }
 
         view.mantenimentA22btn.setOnClickListener {
-            val intent = Intent(activity, PopUpDataManteniment::class.java)
+           /* val intent = Intent(activity, PopUpDataManteniment::class.java)
             intent.putExtra("popupVehicle", "A22")
-            requireActivity().startActivity(intent)
+            requireActivity().startActivity(intent) */
+            toastManteniment()
         }
 
         view.mantenimentA23btn.setOnClickListener {
-            val intent = Intent(activity, PopUpDataManteniment::class.java)
+            /* val intent = Intent(activity, PopUpDataManteniment::class.java)
             intent.putExtra("popupVehicle", "A23")
-            requireActivity().startActivity(intent)
+            requireActivity().startActivity(intent) */
+            toastManteniment()
         }
 
         view.mantenimentA24btn.setOnClickListener {
-            val intent = Intent(activity, PopUpDataManteniment::class.java)
+           /* val intent = Intent(activity, PopUpDataManteniment::class.java)
             intent.putExtra("popupVehicle", "A24")
-            requireActivity().startActivity(intent)
+            requireActivity().startActivity(intent) */
+            toastManteniment()
         }
 
 
 
         return view
+    }
+
+    private fun toastManteniment(){
+        Toast.makeText(requireContext(), "Funció en desenvolupament", Toast.LENGTH_SHORT).show()
     }
 
 

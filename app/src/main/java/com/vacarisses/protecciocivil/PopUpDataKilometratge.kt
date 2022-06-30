@@ -17,8 +17,6 @@ import com.vacarisses.protecciocivil.MainActivity.Companion.usernameGlobal
 import kotlinx.android.synthetic.main.activity_pop_up_data_kilometratge.*
 import kotlinx.android.synthetic.main.activity_pop_up_data_kilometratge.popup_window_background
 import kotlinx.android.synthetic.main.activity_pop_up_data_kilometratge.popup_window_view_with_border
-import kotlinx.android.synthetic.main.activity_pop_up_info.*
-import java.time.LocalDate
 import java.time.LocalDateTime
 
 class PopUpDataKilometratge : AppCompatActivity() {
@@ -62,13 +60,9 @@ class PopUpDataKilometratge : AppCompatActivity() {
             DecelerateInterpolator()
         ).start()
 
-        // Close the Popup Window when you press the button
-        registrarDadesButton.setOnClickListener {
-            onBackPressed()
-        }
 
         //boton limpiar formulario
-        netejarDadesButton.setOnClickListener {
+        tornarKMButton.setOnClickListener {
             kmsAnteriors_label.setText("")
             kmsFinals_label.setText("")
             serveiLabel.setText("")
@@ -98,6 +92,10 @@ class PopUpDataKilometratge : AppCompatActivity() {
                 "Kilometres" to kmsFinals_label.text.toString()
             ), SetOptions.merge()
                         )
+            onBackPressed()
+        }
+
+        tornarKMButton.setOnClickListener{
             onBackPressed()
         }
 
