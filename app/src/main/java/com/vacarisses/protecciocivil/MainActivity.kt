@@ -69,6 +69,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
            R.id.nav_item_home -> replaceFragment(HomeFragment(), "Inici")
            R.id.nav_item_vehicles -> replaceFragment(VehiclesFragment(), "Vehicles")
            R.id.nav_item_camaresforestals -> replaceFragment(CameresForestalsFragment(), "Cameres Forestals")
+           R.id.nav_item_voluntaris -> replaceFragment(VoluntarisFragment(), "Voluntaris")
        }
       drawer.closeDrawer(GravityCompat.START)
       return true

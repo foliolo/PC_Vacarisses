@@ -1,12 +1,16 @@
 package com.vacarisses.protecciocivil
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebView
-import kotlinx.android.synthetic.main.fragment_cameres_forestals.*
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.voluntari_cardview.*
+import kotlinx.android.synthetic.main.voluntari_cardview.view.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -15,10 +19,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [CameresForestalsFragment.newInstance] factory method to
+ * Use the [VoluntarisFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class CameresForestalsFragment : Fragment() {
+class VoluntarisFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,16 +39,25 @@ class CameresForestalsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-
-
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_cameres_forestals, container, false)
+        val view = inflater.inflate(R.layout.fragment_voluntaris, container, false)
 
-       /* val webViewCameres: WebView = view.findViewById(R.id.webview1)
-        webViewCameres.loadUrl("https://vigilant.cat/app?selected_cities[]=ccddbdbc-c881-4a72-bad5-4c67bac3e128&selected_dashboard=576ab78f-7c3e-4de0-accd-23d0125614d3") */
 
-        return inflater.inflate(R.layout.fragment_cameres_forestals, container, false)
+        val recyclerView:RecyclerView=view.findViewById(R.id.voluntariReciclador)
+        recyclerView.layoutManager=LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        val voluntaris=ArrayList<voluntari>()
+
+        voluntaris.add(voluntari("V78", "Vehicles", "adriafernandez14@gmail.com","603672412","Adrià", "Fernández", "Fora de servei"))
+        voluntaris.add(voluntari("V75", "Vehicles", "adriafernandez14@gmail.com","603672412","Adrià", "Fernández", "Fora de servei"))
+
+        val adapter= adapterVoluntari(voluntaris)
+
+        recyclerView.adapter=adapter
+
+
+
+
+        return view
     }
 
     companion object {
@@ -54,12 +67,12 @@ class CameresForestalsFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment CameresForestalsFragment.
+         * @return A new instance of fragment VoluntarisFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            CameresForestalsFragment().apply {
+            VoluntarisFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
@@ -67,3 +80,4 @@ class CameresForestalsFragment : Fragment() {
             }
     }
 }
+

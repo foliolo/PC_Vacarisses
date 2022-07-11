@@ -4,6 +4,9 @@
         <item android:id="@+id/nav_item_home"
             android:icon="@drawable/ic_username"
             android:title="Inici" />
+        <item android:id="@+id/nav_item_voluntaris"
+            android:icon="@drawable/ic_person_search"
+            android:title="Voluntaris"/>
         <item android:id="@+id/nav_item_vehicles"
             android:icon="@drawable/ic_car"
             android:title="Vehicles" />
