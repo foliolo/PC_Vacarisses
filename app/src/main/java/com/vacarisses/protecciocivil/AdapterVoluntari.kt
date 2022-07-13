@@ -31,12 +31,12 @@ class AdapterVoluntari(private val list: ArrayList<Voluntari> = arrayListOf()) :
     inner class ViewHolder(private val binding: VoluntariCardviewBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bindItems(data: Voluntari) = with(binding) {
-            voluntaritextview.text = data.indicatiu
-            carrecvoluntari.text = data.carrec
-            nomvoluntaritextview.text = data.nom
-            mailvoluntari.text = data.mail
-            telefonvoluntari.text = data.telefon
-            estatTextview.text = data.estat
+//            voluntaritextview.text = data.indicatiu
+            carrecvoluntari.text = data.Carrec
+            nomvoluntaritextview.text = data.Nom
+            mailvoluntari.text = data.Mail
+            telefonvoluntari.text = data.Movil
+//            estatTextview.text = data.estat
         }
     }
 }
